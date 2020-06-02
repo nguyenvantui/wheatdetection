@@ -29,8 +29,6 @@ def seed_everything(seed):
 
 seed_everything(SEED)
 
-PATH_CONFIG = 
-
 path_config = "configs/config_full.yaml"
 
 print("Path config:", path_config)

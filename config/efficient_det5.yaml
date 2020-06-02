@@ -1,0 +1,6 @@
+BATCH_SIZE: 4
+EPOCHS: 10
+WORK_DIR: "efficientdet_d5"
+MODEL:
+  NAME: "tf_efficientdet_d5"
+  PRETRAIN: "pre_train/tf_efficientdet_d5-ef44aea8.pth"
