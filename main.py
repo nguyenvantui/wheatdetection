@@ -15,8 +15,10 @@ from torch.utils.data import Dataset,DataLoader
 from torch.utils.data.sampler import SequentialSampler, RandomSampler
 from glob import glob
 import os
+import yaml
 
 SEED = 99
+PATH_CONFIG = "configs/config_full.yaml"
 
 def seed_everything(seed):
     random.seed(seed)
@@ -29,19 +31,21 @@ def seed_everything(seed):
 
 seed_everything(SEED)
 
-path_config = "configs/config_full.yaml"
+print("Path config:", PATH_CONFIG)
 
-print("Path config:", path_config)
+with open(PATH_CONFIG) as f:
+    configs = yaml.load(f)
 
-with open(path_config) as f:
-    config = yaml.load(f)
-
-
-def test():
-    pass
+def val():
+    val_loss = 100
+    val_map = 100
+    return val_loss, val_map
 
 def train():
     pass
 
 def main():
-    pass
+    for epoch in range(configs["EPOCHS"]):
+        print("Starting epoch:", e)
+if __name__ == "__main__":
+    main()

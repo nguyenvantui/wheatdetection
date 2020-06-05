@@ -1,6 +1,10 @@
 BATCH_SIZE: 4
 EPOCHS: 10
+KFOLDS: 5
 WORK_DIR: "efficientdet_d5"
+SOLVER: 
+  LR: 0.001
+  NAME: "ADAMW"
 MODEL:
   NAME: "tf_efficientdet_d5"
   PRETRAIN: "pre_train/tf_efficientdet_d5-ef44aea8.pth"
